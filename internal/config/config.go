@@ -52,6 +52,7 @@ type Config struct {
 	SendEmailEnabled bool          `env:"APP_SEND_EMAIL_ENABLED" envDefault:"false"`
 	MaxWorkers       int           `env:"APP_MAX_WORKERS" envDefault:"10"`
 	WorkerTimeout    time.Duration `env:"APP_WORKER_TIMEOUT" envDefault:"10s"`
+	MaxRetries       int           `env:"APP_MAX_RETRIES" envDefault:"3"`
 }
 
 func NewConfig() (*Config, error) {
